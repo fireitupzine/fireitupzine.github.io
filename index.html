@@ -1,0 +1,139 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="./extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="./extras/modernizr.2.5.3.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+<link rel="icon" href="./img/rob_ford.jpg">
+
+<title>Fire It Up Zine</title>
+</head>
+<body>
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url(img/fireitup.jpg)">
+				<div class='row'>
+					<div class="col s12 m6">
+						<div class="card black">
+							<div class="card-content white-text">
+								<span class="card-title">Fire it Up Skate Zine</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="card">
+            <div class="card-image">
+              <img src="img/mike_downtown.jpg">
+              <span class="card-title">What the Fuck is this?</span>
+            </div>
+						<div class="card-content">
+							<blockquote>
+					      Mike Austin - Hippie Jump
+					    </blockquote>
+						</div>
+            <div class="card-content">
+              <p>Instead of tweaking a muscle from pulling your goalie all day, you can browse this magazine filled with fuckers that know how to rip.</p>
+							<br>
+							<br>
+							<p>This zine, or whatever the fuck you want to call it, will showcase local art, photography, and a bunch of grunts.</p>
+            </div>
+          </div>
+			</div>
+			<div>
+				<div class="card">
+					<div class="card-content">
+						<p>Hopefully we can get some sort of styling going on, because computer programmers are terrible at art and styling shit like this. This can be entirely laid out on print and we can scan it, like other zines do it. Then I can just refer to the scanned images in the html.</p>
+						<br>
+						<br>
+					</div>
+					<div class="card-content">
+						<blockquote>
+							Mike Austin - Ollie Over the Rail
+						</blockquote>
+					</div>
+            <div class="card-image">
+              <img src="img/ollie_over_the_rail.jpg">
+            </div>
+          </div>
+			</div>
+			<div style="background-image:url(img/skull.jpg)">
+			</div>
+			<div>
+				<div class="card">
+					<div class="card-content">
+						<p>See that shit? That was made from a type of neural network called Deep Dream.</p>
+						<br>
+						<br>
+						<p>Anyways Shawn, this is what is possible with just some basic html and some javascript. Hopefully we can make something truly awesome for the Durham skate community.</p>
+					</div>
+					<div class="card-content">
+						<blockquote>
+							Ricky Gouin - Fs Board
+						</blockquote>
+					</div>
+            <div class="card-image">
+              <img src="img/rick_fs_board.jpg">
+            </div>
+          </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:922,
+
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+
+			// Enable gradients
+
+			gradients: true,
+
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['./lib/turn.js'],
+	nope: ['./lib/turn.html4.min.js'],
+	both: ['css/basic.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>
